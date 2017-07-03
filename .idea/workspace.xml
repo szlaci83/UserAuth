@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04cd11ce-2927-446c-a73c-fc9b30892555" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Service/UserDetailsServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserAuth.iml" afterPath="$PROJECT_DIR$/UserAuth.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MockUserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MockUserDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MySqlUserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MySqlUserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/config/SecurityConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -1064,7 +1055,7 @@
       <updated>1498944379364</updated>
       <workItem from="1498944386249" duration="10249000" />
       <workItem from="1499027543820" duration="1269000" />
-      <workItem from="1499109570604" duration="12707000" />
+      <workItem from="1499109570604" duration="12758000" />
     </task>
     <task id="LOCAL-00001" summary="basic setup">
       <created>1498947862449</created>
@@ -1094,11 +1085,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499118007401</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Basic login security implemented on form">
+      <created>1499123792387</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1499123792387</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24225000" />
+    <option name="totallyTimeSpent" value="24276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="0" />
@@ -1148,7 +1146,8 @@
     <MESSAGE value="starter API and mock DB added" />
     <MESSAGE value="Hibernate integration added and tested" />
     <MESSAGE value="MySQLDAO added, getallusers working" />
-    <option name="LAST_COMMIT_MESSAGE" value="MySQLDAO added, getallusers working" />
+    <MESSAGE value="Basic login security implemented on form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic login security implemented on form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
