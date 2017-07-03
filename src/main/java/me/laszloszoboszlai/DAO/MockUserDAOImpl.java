@@ -64,4 +64,9 @@ public class MockUserDAOImpl implements UserDAO {
     public void registerUser(User user) {
         this.users.put(user.getId(), user);
     }
+
+    @Override
+    public User findUserByName(String userName) {
+        return null;
+    }
 }

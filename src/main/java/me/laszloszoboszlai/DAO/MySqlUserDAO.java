@@ -2,15 +2,18 @@ package me.laszloszoboszlai.DAO;
 
 import me.laszloszoboszlai.Entity.Role;
 import me.laszloszoboszlai.Entity.User;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import org.hibernate.service.ServiceRegistry;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by laci on 02/07/2017.
@@ -41,7 +44,9 @@ public class MySqlUserDAO implements UserDAO{
     public Collection<User> getAllUsers() {
         Session newSession = session.getCurrentSession();
                 newSession.beginTransaction();
-               return newSession.createQuery("from User").list();
+
+                List<User> users = newSession.createQuery("from User").list();
+               return users;
     }
 
     @Override
@@ -67,5 +72,16 @@ public class MySqlUserDAO implements UserDAO{
     @Override
     public void registerUser(User user) {
 
+    }
+
+    @Override
+    public User findUserByName(String userName) {
+        Session newSession = session.getCurrentSession();
+        newSession.beginTransaction();
+        String hql = "FROM User u WHERE u.userName = :uname";
+        Query query = newSession.createQuery(hql);
+        query.setParameter("uname",userName);
+        User theUser = (User)query.getSingleResult();
+        return theUser;
     }
 }

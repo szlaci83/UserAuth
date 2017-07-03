@@ -19,4 +19,6 @@ public interface UserDAO {
     void updateUserBy(User user);
 
     void registerUser(User user);
+
+    User findUserByName(String userName);
 }
