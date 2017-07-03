@@ -19,9 +19,9 @@ public class MockUserDAOImpl implements UserDAO {
     static{
         users = new HashMap<Integer, User>(){
             {
-                put(1, new User(1,"John","Lennon","j@gmail.com","johnny",true));
-                put(2, new User(2,"Alice","Cooper","ac@yahoo.com","cooper11",false));
-                put(3, new User(3,"Axel","Rose","xl.rose@gmail.com","guns",true));
+                put(1, new User(1,"johnny", "John","Lennon","j@gmail.com","johnny",true));
+                put(2, new User(2,"alice","Alice","Cooper","ac@yahoo.com","cooper11",false));
+                put(3, new User(3,"xl","Axel","Rose","xl.rose@gmail.com","guns",true));
             }
         };
     }

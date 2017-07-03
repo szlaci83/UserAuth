@@ -14,13 +14,12 @@ public class HibernateTest {
     private static ServiceRegistry serviceRegistry;
 
     public static SessionFactory createSessionFactory() {
-        Configuration configuration = (Configuration) new Configuration()
+
+        Configuration configuration = new Configuration()
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Student.class);
         ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(
-                 new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Student.class).getProperties()).build();
+                 configuration.getProperties()).build();
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);
         return sessionFactory;
     }

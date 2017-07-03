@@ -14,7 +14,7 @@ import java.util.Collection;
 @Service
 public class UserService {
     @Autowired
-    @Qualifier("Mock data")
+    @Qualifier("mySqlData")
     private UserDAO userDao;
 
     public Collection<User> getAllUsers(){
