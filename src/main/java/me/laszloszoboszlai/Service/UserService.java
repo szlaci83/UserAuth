@@ -17,6 +17,9 @@ public class UserService {
     @Qualifier("mySqlData")
     private UserDAO userDao;
 
+    @Autowired
+    private MailServiceImpl mailService;
+
     public Collection<User> getAllUsers(){
         return userDao.getAllUsers();
     }
@@ -42,8 +45,11 @@ public class UserService {
 
         //TODO:send confirmation email to user
         String validationUri = "localhost:8080/validate/" + user.hashCode();
-
-
+        mailService.sendEmail(user.getEmail(), "valigation@serice.com",
+                "Please validate your email account", "" +
+                        "Thanks for registering, your validation URI is:" +
+                        "\n" +
+                        validationUri);
 
     }
 
