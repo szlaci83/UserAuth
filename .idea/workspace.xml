@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="04cd11ce-2927-446c-a73c-fc9b30892555" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Controller/AuthController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Controller/RegistrationController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Controller/ValidationController.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_7_RELEASE.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserAuth.iml" afterPath="$PROJECT_DIR$/UserAuth.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MockUserDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MockUserDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MySqlUserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/MySqlUserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/UserDAO.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/DAO/UserDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Service/UserDetailsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Service/UserDetailsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/Service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/config/SecurityConfig.java" afterPath="$PROJECT_DIR$/src/main/java/me/laszloszoboszlai/config/SecurityConfig.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -895,7 +884,7 @@
       <workItem from="1498944386249" duration="10249000" />
       <workItem from="1499027543820" duration="1269000" />
       <workItem from="1499109570604" duration="12852000" />
-      <workItem from="1499197570136" duration="5655000" />
+      <workItem from="1499197570136" duration="5687000" />
     </task>
     <task id="LOCAL-00001" summary="basic setup">
       <created>1498947862449</created>
@@ -939,11 +928,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499123801060</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="registration works with mysql">
+      <created>1499203264033</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1499203264033</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30025000" />
+    <option name="totallyTimeSpent" value="30057000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="0" />
@@ -993,7 +989,8 @@
     <MESSAGE value="Hibernate integration added and tested" />
     <MESSAGE value="MySQLDAO added, getallusers working" />
     <MESSAGE value="Basic login security implemented on form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Basic login security implemented on form" />
+    <MESSAGE value="registration works with mysql" />
+    <option name="LAST_COMMIT_MESSAGE" value="registration works with mysql" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
