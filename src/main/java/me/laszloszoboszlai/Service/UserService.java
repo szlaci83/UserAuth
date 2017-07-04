@@ -39,5 +39,14 @@ public class UserService {
 
     public void registerUser(User user) {
         userDao.registerUser(user);
+
+        //TODO:send confirmation email to user
+        String validationUri = "localhost:8080/validate/" + user.hashCode();
+
+
+
+    }
+
+    public boolean isUserExists(User user) { return userDao.isUserExists(user);
     }
 }

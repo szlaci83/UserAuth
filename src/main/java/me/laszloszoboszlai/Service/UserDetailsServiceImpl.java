@@ -1,4 +1,4 @@
-package me.laszloszoboszlai.Service;
+/**package me.laszloszoboszlai.Service;
 
 import me.laszloszoboszlai.DAO.MySqlUserDAO;
 import me.laszloszoboszlai.Entity.Role;
@@ -15,9 +15,9 @@ import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/**
+
  * Created by laci on 03/07/2017.
- */
+
 @Service("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
 
@@ -47,3 +47,5 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
 }
+
+ */

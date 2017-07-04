@@ -1,13 +1,13 @@
-package me.laszloszoboszlai.config;
+/**package me.laszloszoboszlai.config;
 
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-/**
+
  * Created by laci on 03/07/2017.
- */
+
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
@@ -20,8 +20,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                     .and()
                     .formLogin();
     }
-
-
-
-
 }
+ */

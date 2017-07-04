@@ -69,4 +69,9 @@ public class MockUserDAOImpl implements UserDAO {
     public User findUserByName(String userName) {
         return null;
     }
+
+    @Override
+    public boolean isUserExists(User user) {
+        return false;
+    }
 }

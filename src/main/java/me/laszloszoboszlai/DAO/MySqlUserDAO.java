@@ -2,7 +2,6 @@ package me.laszloszoboszlai.DAO;
 
 import me.laszloszoboszlai.Entity.Role;
 import me.laszloszoboszlai.Entity.User;
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -12,6 +11,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.NoResultException;
 import java.util.Collection;
 import java.util.List;
 
@@ -71,8 +71,13 @@ public class MySqlUserDAO implements UserDAO{
 
     @Override
     public void registerUser(User user) {
-
+        Session newSession = session.getCurrentSession();
+        newSession.beginTransaction();
+        newSession.save(user);
+        session.getCurrentSession().close();
     }
+
+
 
     @Override
     public User findUserByName(String userName) {
@@ -83,5 +88,29 @@ public class MySqlUserDAO implements UserDAO{
         query.setParameter("uname",userName);
         User theUser = (User)query.getSingleResult();
         return theUser;
+    }
+
+    @Override
+    public boolean isUserExists(User user) {
+        String email = user.getEmail();
+        String userName = user.getUserName();
+
+        try {
+            Session newSession = session.getCurrentSession();
+            newSession.beginTransaction();
+            String hql = "FROM User u WHERE u.userName = :uname OR u.email = :email";
+            Query query = newSession.createQuery(hql);
+            query.setParameter("uname", userName);
+            query.setParameter("email", email);
+
+            User theUser = (User) query.getSingleResult();
+
+        } catch (NoResultException exception){
+            return false;
+        }
+        finally {
+            session.getCurrentSession().close();
+        }
+        return true;
     }
 }

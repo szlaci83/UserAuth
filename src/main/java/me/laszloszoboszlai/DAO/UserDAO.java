@@ -21,4 +21,6 @@ public interface UserDAO {
     void registerUser(User user);
 
     User findUserByName(String userName);
+
+    boolean isUserExists(User user);
 }
