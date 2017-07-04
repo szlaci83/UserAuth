@@ -74,4 +74,14 @@ public class MockUserDAOImpl implements UserDAO {
     public boolean isUserExists(User user) {
         return false;
     }
+
+    @Override
+    public User getUserByEmail(String email) {
+        return null;
+    }
+
+    @Override
+    public void validateUser(User theUser) {
+
+    }
 }

@@ -23,4 +23,8 @@ public interface UserDAO {
     User findUserByName(String userName);
 
     boolean isUserExists(User user);
+
+    User getUserByEmail(String email);
+
+    void validateUser(User theUser);
 }

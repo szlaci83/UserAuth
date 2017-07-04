@@ -43,7 +43,6 @@ public class UserService {
     public void registerUser(User user) {
         userDao.registerUser(user);
 
-        //TODO:send confirmation email to user
         String validationUri = "localhost:8080/validate/" + user.hashCode();
         mailService.sendEmail(user.getEmail(), "valigation@serice.com",
                 "Please validate your email account", "" +
@@ -54,5 +53,13 @@ public class UserService {
     }
 
     public boolean isUserExists(User user) { return userDao.isUserExists(user);
+    }
+
+    public User getUserByEmail(String email) {
+        return userDao.getUserByEmail(email);
+    }
+
+    public void validateUser(User theUser) {
+        userDao.validateUser(theUser);
     }
 }

@@ -3,11 +3,11 @@ package me.laszloszoboszlai.Controller;
 import me.laszloszoboszlai.Entity.User;
 import me.laszloszoboszlai.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.util.UriComponentsBuilder;
 
 /**
  * Created by laci on 04/07/2017.
@@ -19,9 +19,22 @@ public class ValidationController {
     private UserService userService;
 
     //method to validate user account
-    @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void registerUser(@RequestBody User user){
-        userService.registerUser(user);
+    @RequestMapping(value = "/{email}/{hash}", method = RequestMethod.GET)
+    public ResponseEntity<Void> getUserByEmail(@PathVariable("email") String email,
+                                               @PathVariable("hash") int hash,
+                                               UriComponentsBuilder ucBuilder){
+
+        User theUser = userService.getUserByEmail(email);
+        HttpHeaders headers = new HttpHeaders();
+
+        if (theUser == null) {
+            return new ResponseEntity<Void>(HttpStatus.CONFLICT);
+        }
+        if (theUser.hashCode() == hash) {
+            userService.validateUser(theUser);
+            return new ResponseEntity<Void>(headers, HttpStatus.ACCEPTED);
+        }
+        return new ResponseEntity<Void>(headers, HttpStatus.EXPECTATION_FAILED);
     }
 
 }

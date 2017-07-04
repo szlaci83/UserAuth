@@ -113,4 +113,45 @@ public class MySqlUserDAO implements UserDAO{
         }
         return true;
     }
+
+    @Override
+    public User getUserByEmail(String email) {
+        User theUser = null;
+        try {
+            Session newSession = session.getCurrentSession();
+            newSession.beginTransaction();
+            String hql = "FROM User u WHERE u.email = :email";
+            Query query = newSession.createQuery(hql);
+            query.setParameter("email", email);
+
+            theUser = (User) query.getSingleResult();
+
+        } catch (NoResultException exception){
+            return theUser;
+        }
+        finally {
+            session.getCurrentSession().close();
+        }
+        return theUser;
+    }
+
+    @Override
+    public void validateUser(User theUser) {
+        User targetUser = getUserByEmail(theUser.getEmail());
+
+        try {
+            Session newSession = session.getCurrentSession();
+            newSession.beginTransaction();
+            String hql = "UPDATE User u SET confirmed = true WHERE u.id = :id";
+            Query query = newSession.createQuery(hql);
+            query.setParameter("id", targetUser.getId());
+            int result = query.executeUpdate();
+
+            } catch (NoResultException exception){
+        }
+        finally {
+            session.getCurrentSession().close();
+        }
+
+    }
 }
