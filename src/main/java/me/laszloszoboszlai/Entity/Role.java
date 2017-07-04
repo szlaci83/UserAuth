@@ -1,5 +1,8 @@
 package me.laszloszoboszlai.Entity;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,6 +20,7 @@ public class Role {
     @Column(name = "roleName")
     private String roleName;
 
+    @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany(mappedBy = "roles")
     List<User> users;
 

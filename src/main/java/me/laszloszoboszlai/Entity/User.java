@@ -1,5 +1,11 @@
 package me.laszloszoboszlai.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.List;
@@ -7,6 +13,7 @@ import java.util.List;
 /**
  * Created by laci on 01/07/2017.
  */
+
 @Entity
 public class User implements Serializable{
 
@@ -42,6 +49,7 @@ public class User implements Serializable{
         this.roles = roles;
     }
 
+    @LazyCollection(LazyCollectionOption.FALSE)
     @ManyToMany
     @JoinTable(name = "user_roles",
             joinColumns = @JoinColumn(name = "user_id"),

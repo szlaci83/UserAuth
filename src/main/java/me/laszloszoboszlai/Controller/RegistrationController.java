@@ -25,7 +25,6 @@ public class RegistrationController {
     private UserService userService;
 
     //method to register a user
-    //TODO: check if user already registered
     @RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> registerUser(@RequestBody User user, UriComponentsBuilder ucBuilder) {
         if (userService.isUserExists(user)){
@@ -34,7 +33,7 @@ public class RegistrationController {
         userService.registerUser(user);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setLocation(ucBuilder.path("/user/{id}").buildAndExpand(user.getId()).toUri());
+        headers.setLocation(ucBuilder.path("/users/{id}").buildAndExpand(user.getId()).toUri());
         return new ResponseEntity<Void>(headers, HttpStatus.CREATED);
     }
 

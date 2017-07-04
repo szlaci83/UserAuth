@@ -43,13 +43,13 @@ public class UserService {
     public void registerUser(User user) {
         userDao.registerUser(user);
 
-        String validationUri = "localhost:8080/validate/" + user.hashCode();
-        mailService.sendEmail(user.getEmail(), "valigation@serice.com",
-                "Please validate your email account", "" +
+        String validationUri = "localhost:8080/validate/"+user.getEmail()+"/" + user.hashCode();
+        mailService.sendEmail(user.getEmail(), "validation@serice.com",
+                "Login activation link inside!", "" +
                         "Thanks for registering, your validation URI is:" +
                         "\n" +
-                        validationUri);
-
+                        validationUri +
+                        "\n copy and paste it to your browser to validate your account! :D "   );
     }
 
     public boolean isUserExists(User user) { return userDao.isUserExists(user);
@@ -62,4 +62,5 @@ public class UserService {
     public void validateUser(User theUser) {
         userDao.validateUser(theUser);
     }
+
 }

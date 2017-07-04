@@ -61,7 +61,24 @@ public class MySqlUserDAO implements UserDAO{
 
     @Override
     public User getUserByCredentials(String email, String password) {
-        return null;
+            User theUser = null;
+        try {
+            Session newSession = session.getCurrentSession();
+            newSession.beginTransaction();
+            String hql = "FROM User u WHERE u.email = :email AND u.password = :pass";
+            Query query = newSession.createQuery(hql);
+            query.setParameter("pass", password);
+            query.setParameter("email", email);
+
+            theUser = (User) query.getSingleResult();
+
+        } catch (NoResultException exception){
+            return theUser;
+        }
+        finally {
+            session.getCurrentSession().close();
+        }
+        return theUser;
     }
 
     @Override
