@@ -44,12 +44,12 @@ public class UserService {
         userDao.registerUser(user);
 
         String validationUri = "localhost:8080/validate/"+user.getEmail()+"/" + user.hashCode();
-        mailService.sendEmail(user.getEmail(), "validation@serice.com",
-                "Login activation link inside!", "" +
-                        "Thanks for registering, your validation URI is:" +
-                        "\n" +
-                        validationUri +
-                        "\n copy and paste it to your browser to validate your account! :D "   );
+        mailService.sendEmail(
+                user.getEmail(),
+                mailService.getFromMail(),
+                mailService.getSubject(),
+                mailService.MailBodyBuilder(user.getUserName(), validationUri)
+        );
     }
 
     public boolean isUserExists(User user) { return userDao.isUserExists(user);
