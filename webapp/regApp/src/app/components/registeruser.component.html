@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+</head>
+<body>
+<h3>Enter your details to register</h3>
+<form>
+  <label>Username: </label> <br/>
+  <input type="text" name="user.userName" [(ngModel)]="user.userName"/> <br/>
+
+  <label>Password:</label> <br/>
+  <input type="text" name="user.password" [(ngModel)]="user.password"/> <br/>
+
+  <label>Confirm Password:</label> <br/>
+  <input type="text" name="cpassword" [(ngModel)]="cpassword"/> <br/>
+
+  <label>Firstname:</label> <br/>
+  <input type="text" name="user.firstName" [(ngModel)]="user.firstName"/> <br/>
+
+  <label>Lastname:</label> <br/>
+  <input type="text" name="user.lastName" [(ngModel)]="user.lastName"/> <br/>
+
+  <label>Email adress:</label> <br/>
+  <input type="text" name="user.email" [(ngModel)]="user.email"/> <br/>
+
+</form>
+
+<button (click)="registerUser()">Register</button>
+
+</body>
+</html>
