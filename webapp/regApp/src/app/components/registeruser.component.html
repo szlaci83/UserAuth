@@ -28,12 +28,12 @@
         <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ reqAlert }}</div>
 
         <label>Firstname
-          <textarea formControlName="firstName"></textarea>
+          <input type="text" formControlName="firstName" minlength="3">
         </label>
 
 
         <label>Lastname
-          <textarea formControlName="lastName"></textarea>
+          <input type="text" formControlName="lastName"  minlength="3">
         </label>
 
         <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">

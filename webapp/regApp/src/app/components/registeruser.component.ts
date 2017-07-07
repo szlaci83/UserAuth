@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import { RegisterUserService} from '../services/registeruser.service';
 
+
 @Component({
   selector: 'register',
   templateUrl: './registeruser.component.html',
@@ -49,7 +50,7 @@ export class RegisterUserComponent {
     registerUser(user){
       this.userName = user.userName;
       this.email = user.email;
-      console.log(this.userName);
+      console.log(user);
 
      // RegisterUserService.registerUser(User);
     }

@@ -7,7 +7,7 @@
 }
 
 .alert {
-  background: #f2edda;
+  background: #fc8c84;
   padding: 7px;
   font-size: .9em;
   margin-bottom: 20px;
@@ -32,7 +32,7 @@ h1 {
     transform: translateY(-20px);
   }
   to {
-    opacity:1;
+    opacity:0.8;
     transform: translateY(0);
   }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login page</title>
+</head>
+<body>
+<div >
+  <form [formGroup]="rForm" (ngSubmit)="loginUser(rForm.value)">
+    <div class="form-container">
+      <div class="row columns">
+
+        <h1>Login Form</h1>
+
+        <label>Email
+          <input type="text" formControlName="email">
+        </label>
+        <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ reqAlert }}</div>
+
+        <label>Password
+          <input type="text" formControlName="password">
+        </label>
+        <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">{{ reqAlert }}</div>
+
+        <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+      </div>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
