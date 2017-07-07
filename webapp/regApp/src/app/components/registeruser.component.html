@@ -5,29 +5,42 @@
     <title>Registration page</title>
 </head>
 <body>
-<h3>Enter your details to register</h3>
-<form>
-  <label>Username: </label> <br/>
-  <input type="text" name="user.userName" [(ngModel)]="user.userName"/> <br/>
+<div >
+  <form [formGroup]="rForm" (ngSubmit)="registerUser(rForm.value)">
+    <div class="form-container">
+      <div class="row columns">
 
-  <label>Password:</label> <br/>
-  <input type="text" name="user.password" [(ngModel)]="user.password"/> <br/>
+        <h1>Registration Form</h1>
 
-  <label>Confirm Password:</label> <br/>
-  <input type="text" name="cpassword" [(ngModel)]="cpassword"/> <br/>
+        <label>Username
+          <input type="text" formControlName="userName">
+        </label>
+        <div class="alert" *ngIf="!rForm.controls['userName'].valid && rForm.controls['userName'].touched">{{ reqAlert }}</div>
 
-  <label>Firstname:</label> <br/>
-  <input type="text" name="user.firstName" [(ngModel)]="user.firstName"/> <br/>
+        <label>Password
+          <input type="text" formControlName="password">
+        </label>
+        <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">{{ reqAlert }}</div>
 
-  <label>Lastname:</label> <br/>
-  <input type="text" name="user.lastName" [(ngModel)]="user.lastName"/> <br/>
+        <label>Email
+          <input type="text" formControlName="email">
+        </label>
+        <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ reqAlert }}</div>
 
-  <label>Email adress:</label> <br/>
-  <input type="text" name="user.email" [(ngModel)]="user.email"/> <br/>
+        <label>Firstname
+          <textarea formControlName="firstName"></textarea>
+        </label>
 
-</form>
 
-<button (click)="registerUser()">Register</button>
+        <label>Lastname
+          <textarea formControlName="lastName"></textarea>
+        </label>
+
+        <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+      </div>
+    </div>
+  </form>
+</div>
 
 </body>
 </html>
