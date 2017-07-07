@@ -3,7 +3,7 @@
  */
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import {Md5} from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'login',
@@ -36,6 +36,7 @@ export class LoginComponent {
 
 
   loginUser(user){
+    user.password = Md5.hashStr(user.password).toString();
     this.email = user.email;
     this.password = user.password;
     console.log(user);

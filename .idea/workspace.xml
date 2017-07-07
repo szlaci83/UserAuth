@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="04cd11ce-2927-446c-a73c-fc9b30892555" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.ts" />
+    <list default="true" id="04cd11ce-2927-446c-a73c-fc9b30892555" name="Default" comment="login form template added and forms routed">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/package-lock.json" afterPath="$PROJECT_DIR$/webapp/regApp/package-lock.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/package.json" afterPath="$PROJECT_DIR$/webapp/regApp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/app/app.module.ts" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/app/app.routing.ts" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/app.routing.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.css" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.html" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.ts" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts" afterPath="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webapp/regApp/src/index.html" afterPath="$PROJECT_DIR$/webapp/regApp/src/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,9 +45,9 @@
         <entry file="file://$PROJECT_DIR$/webapp/regApp/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+              <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
               <folding>
-                <marker date="1499458527304" expanded="true" signature="306:731" ph="{&quot;@angular/common&quot;: &quot;^2.3.1&quot;...}" />
+                <marker date="1499461096168" expanded="true" signature="306:790" ph="{&quot;@angular/common&quot;: &quot;^2.3.1&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -67,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registeruser.component.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="registeruser.component.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+            <state relative-caret-position="510">
+              <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#42#84#0" expanded="true" />
@@ -80,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="38" column="58" lean-forward="false" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
               <folding>
                 <element signature="e#42#84#0" expanded="true" />
               </folding>
@@ -116,15 +112,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="registeruser.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/services/registeruser.service.ts">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/webapp/regApp/src/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#42#83#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="359">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -196,14 +189,14 @@
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/services/registeruser.service.ts" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/app.component.ts" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/user.component.ts" />
-        <option value="$PROJECT_DIR$/webapp/regApp/src/index.html" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.html" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.css" />
-        <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.html" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/app.routing.ts" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/webapp/regApp/src/index.html" />
         <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.ts" />
+        <option value="$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts" />
       </list>
     </option>
   </component>
@@ -645,7 +638,7 @@
       <workItem from="1499197570136" duration="14594000" />
       <workItem from="1499285229526" duration="5628000" />
       <workItem from="1499371128111" duration="3904000" />
-      <workItem from="1499457970898" duration="1428000" />
+      <workItem from="1499457970898" duration="3540000" />
     </task>
     <task id="LOCAL-00001" summary="basic setup">
       <created>1498947862449</created>
@@ -759,11 +752,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499385887524</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="login form template added and forms routed">
+      <created>1499459481424</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1499459481424</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54200000" />
+    <option name="totallyTimeSpent" value="56312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="0" />
@@ -821,7 +821,8 @@
     <MESSAGE value="simple auth added" />
     <MESSAGE value="requestmapping added" />
     <MESSAGE value="basic angular2 reg form added" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic angular2 reg form added" />
+    <MESSAGE value="login form template added and forms routed" />
+    <option name="LAST_COMMIT_MESSAGE" value="login form template added and forms routed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1103,20 +1104,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/regApp/src/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/user.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1126,8 +1119,8 @@
         <state relative-caret-position="153">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#42#83#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#42#83#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1143,9 +1136,9 @@
     <entry file="file://$PROJECT_DIR$/webapp/regApp/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding>
-            <marker date="1499458527304" expanded="true" signature="306:731" ph="{&quot;@angular/common&quot;: &quot;^2.3.1&quot;...}" />
+            <marker date="1499461096168" expanded="true" signature="306:790" ph="{&quot;@angular/common&quot;: &quot;^2.3.1&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -1186,30 +1179,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts">
+    <entry file="file://$PROJECT_DIR$/webapp/regApp/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="7" lean-forward="true" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#42#84#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="false" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="38" column="58" lean-forward="false" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
           <folding>
+            <element signature="e#42#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/regApp/src/app/components/registeruser.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="39" column="47" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
             <element signature="e#42#84#0" expanded="true" />
           </folding>
         </state>

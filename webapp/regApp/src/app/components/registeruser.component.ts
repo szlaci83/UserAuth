@@ -3,6 +3,7 @@
  */
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Md5} from 'ts-md5/dist/md5';
 //import { RegisterUserService} from '../services/registeruser.service';
 
 
@@ -48,6 +49,7 @@ export class RegisterUserComponent {
 
 
     registerUser(user){
+      user.password = Md5.hashStr(user.password).toString();
       this.userName = user.userName;
       this.email = user.email;
       console.log(user);
