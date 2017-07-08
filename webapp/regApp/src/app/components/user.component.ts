@@ -27,7 +27,9 @@ export class UserComponent {
         this.showRoles = false;
 
         this.userService.getUsers().subscribe(users => {
-            this.users = users;
+            this.users = users,
+            error => alert(error),
+            () => console.log("GetUsers finished!");
         });
     }
 

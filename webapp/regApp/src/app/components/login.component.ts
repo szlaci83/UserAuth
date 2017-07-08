@@ -4,28 +4,22 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Md5} from 'ts-md5/dist/md5';
+import { Credential } from '../components/Credential';
+import { LoginService} from '../services/login.service'
 
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['./registeruser.component.css']
+  styleUrls: ['./registeruser.component.css'],
+  providers: [LoginService]
 })
 
 export class LoginComponent {
 
   rForm: FormGroup;
-  user:any;
-
   reqAlert: string = 'This fiels is required!';
-
-  id: number = 0;
-  userName: string = "";
-  firstName: string = "";
-  lastName: string = "";
-  email: string = "";
-  password: string = "";
-  confirmed: boolean = false;
-  roles: string[] = ["USER"];
+  credentials: Credential;
+  private loginService: LoginService;
 
   constructor(private fb: FormBuilder){
     this.rForm = fb.group({
@@ -34,23 +28,17 @@ export class LoginComponent {
     });
   }
 
-
   loginUser(user){
-    user.password = Md5.hashStr(user.password).toString();
-    this.email = user.email;
-    this.password = user.password;
-    console.log(user);
+    //this.credentials = new Credential(user.email,  Md5.hashStr(user.password).toString());
+    this.credentials = new Credential(user.email, user.password);
+    //console.log(this.credentials);
+    this.loginService.Login(this.credentials).subscribe(
+      data => alert(data),
+      error => alert(error)
+    );
+
+
   }
 
 }
 
-interface User{
-  id: number;
-  userName: string;
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-  confirmed: boolean;
-  roles: string[];
-}
