@@ -10,7 +10,7 @@ export class UserService {
     }
 
     getUsers() {
-      return this.http.get('http://localhost:8080//users')
+      return this.http.get('http://localhost:8080/users')
            .map(res => res.json());
     }
 }

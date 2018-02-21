@@ -19,9 +19,8 @@ export class LoginComponent {
   rForm: FormGroup;
   reqAlert: string = 'This fiels is required!';
   credentials: Credential;
-  private loginService: LoginService;
 
-  constructor(private fb: FormBuilder){
+  constructor(private fb: FormBuilder, private loginService : LoginService){
     this.rForm = fb.group({
       'email': [null, Validators.required],
       password: [null, Validators.required],
@@ -31,7 +30,7 @@ export class LoginComponent {
   loginUser(user){
     //this.credentials = new Credential(user.email,  Md5.hashStr(user.password).toString());
     this.credentials = new Credential(user.email, user.password);
-    //console.log(this.credentials);
+    console.log(this.credentials);
     this.loginService.Login(this.credentials).subscribe(
       data => alert(data),
       error => alert(error)

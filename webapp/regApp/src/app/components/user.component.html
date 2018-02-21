@@ -38,9 +38,17 @@
   <input type="text" name="address.postcode" [(ngModel)]="address.postcode"/> <br/>
 
 </form>
+
+<div >
+  <form [formGroup]="userForm" (ngSubmit)="registerUser(rForm.value)">
+        <input type="submit" class="button expanded" value="Fetch!">
+
+  </form>
+</div>
 -->
+
 <h3> Users from Spring boot app </h3>
 <div *ngFor="let user of users">
-  <p>{{user.userName}}</p>
-  <p>{{user.email}}</p>
+  <p>Username : {{user.userName}}</p>
+  <p>email : {{user.email}}</p>
 </div>

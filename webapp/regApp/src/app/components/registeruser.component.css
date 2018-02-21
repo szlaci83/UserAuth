@@ -18,13 +18,13 @@
 .button {
   margin-top: 3rem;
 }
+
 h1 {
+  font-family: "Courier New", Courier, monospace;
   margin-bottom: 2rem;
   font-weight:bold;
-  font-family:'Muli';
   font-size: 2em;
 }
-
 
 @keyframes alertAnim {
   from {

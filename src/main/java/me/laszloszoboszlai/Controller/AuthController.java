@@ -1,5 +1,6 @@
 package me.laszloszoboszlai.Controller;
 
+import me.laszloszoboszlai.Entity.Credentials;
 import me.laszloszoboszlai.Entity.User;
 import me.laszloszoboszlai.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +20,11 @@ public class AuthController {
     private UserService userService;
 
     //Simple authentication returns the user
-    @RequestMapping(value = "/{email}/{password}", method = RequestMethod.GET)
-    public ResponseEntity SimpleAuthentication(@PathVariable("email") String email,
-                                               @PathVariable("password") String password,
+    @CrossOrigin
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public ResponseEntity SimpleAuthentication(@RequestBody Credentials credentials,
                                                UriComponentsBuilder ucBuilder) {
-        User theUser = userService.getUserByCredentials(email, password);
+        User theUser = userService.getUserByCredentials(credentials.getEmail(), credentials.getPassword());
         /*if (! userService.isUserExists(theUser)){
             return new ResponseEntity<Void>(HttpStatus.CONFLICT);
         }*/

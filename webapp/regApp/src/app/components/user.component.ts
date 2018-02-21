@@ -4,46 +4,18 @@ import { UserService } from '../services/user.service';
 @Component({
     selector: 'user',
     templateUrl: './user.component.html',
+    styleUrls: ['./registeruser.component.css'],
     providers: [UserService]
 })
 export class UserComponent {
-    name: string;
-    email: string;
-    address: address;
-    roles: string[];
-    showRoles: boolean;
     users: UserInt[];
 
     constructor(private userService: UserService) {
-        this.name = 'John Doe';
-        this.email = 'john@gmail.com';
-        this.address = {
-            street: 'London road',
-            city: 'Manchester',
-            postcode: 'MAN12UJ'
-        }
-
-        this.roles = ['ADMIN', 'USER'];
-        this.showRoles = false;
-
         this.userService.getUsers().subscribe(users => {
             this.users = users,
             error => alert(error),
             () => console.log("GetUsers finished!");
         });
-    }
-
-    addRole(role) {
-        this.roles.push(role);
-
-    }
-
-    deleteRole(i) {
-        this.roles.splice(i, 1);
-    }
-
-    toggleRoles() {
-        this.showRoles = !this.showRoles;
     }
 }
 

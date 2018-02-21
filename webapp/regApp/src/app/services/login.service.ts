@@ -13,11 +13,15 @@ export class LoginService {
     console.log('Login service started...');
   }
 
+  APIUrl = 'http://localhost:8080/authorise/';
+
   Login(cr: Credential) {
-    let headers  = new Headers({ 'Content-Type': 'text/plain' } );
+    let headers  = new Headers({ 'Content-Type': 'application/json' } );
+    headers.append('Access-Control-Allow-Origin', '*');
     let options  = new RequestOptions({ headers: headers });
 
-    return this.http.post('http://localhost:8080//authorise/' + cr.email +"/" + cr.password, "", options)
-      .map((res  => res.json()));
+    console.log(cr);
+    return this.http.post(this.APIUrl, cr, options)
+      .map((res  => console.log(res)));
   }
 }

@@ -18,21 +18,20 @@ import { RegisterUserService} from '../services/registeruser.service';
 
 export class RegisterUserComponent {
 
-  registerUserService: RegisterUserService;
   rForm: FormGroup;
-  reqAlert: string = 'This fiels is required!';
+  reqAlert = 'This field is required!';
 
-  id: number = 0;
-  userName: string = "";
-  firstName: string = "";
-  lastName: string = "";
-  email: string = "";
-  password: string = "";
-  confirmed: boolean = false;
-  roles: string[] = ["USER"];
+  id = 0;
+  userName = '';
+  firstName = '';
+  lastName = '';
+  email = '';
+  password = '';
+  confirmed = false;
+  //roles = '[USER]';
   theUser: User;
 
-    constructor(private fb: FormBuilder){
+    constructor(private fb: FormBuilder, private registerUserService: RegisterUserService) {
       this.rForm = fb.group({
          'userName': [null, Validators.required],
          'email': [null, Validators.required],
@@ -42,17 +41,11 @@ export class RegisterUserComponent {
     });
     }
 
-  registerUser(user)
-    {
-      this.theUser = new User(user.userName, user.firstName, user.lastName, user.email, user.password, "false");
+  registerUser(user) {
+      this.theUser = new User(user.firstName, user.lastName, user.email, user.password, user.userName, 'false');
       console.log(JSON.stringify(this.theUser));
-      this.registerUserService.registerUser(this.theUser)
-        .subscribe(
-        //  data => alert(data),
-          error => alert(error),
-         // () => console.log("Getusers finished!")
-        );
-
-
+      this.registerUserService.registerUser(this.theUser).subscribe(res => {
+        alert("Registration complete!");
+      });
     }
 }

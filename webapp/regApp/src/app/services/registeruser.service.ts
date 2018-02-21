@@ -14,18 +14,28 @@ export class RegisterUserService {
     console.log('register User service started...');
   }
 
-  private APIUrl = 'http://localhost:8080//register';
+  private APIUrl = 'http://localhost:8080/register';
 
 
-  registerUser(body: User) {
-    //let bodyString = JSON.stringify(body);
-    let headers  = new Headers({ 'Content-Type': 'application/json' });
-    let originHeader = new Headers({ 'Content-Type': 'application/json' });
-    let options  = new RequestOptions({ headers: headers });
+  public registerUser(body: User) {
+    const headers  = new Headers({ 'Content-Type': 'application/json' });
+    headers.append('Access-Control-Allow-Origin', '*');
+    const originHeader = new Headers({ 'Content-Type': 'application/json' });
+    const options  = new RequestOptions({ headers: headers });
 
     return this.http.post(this.APIUrl, body, options)
-      .map((res : Response) => res.json())
-      .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
-
+      .map(err => console.log(err),
+        res  => console.log(res));
   }
+
+  //
+  // extractData(res: Response) {
+  //   let body = res.json();
+  //   return body || {};
+  // }
+  //
+  // handleErrorPromise (error: Response | any) {
+  //   console.error(error.message || error);
+  //   return Promise.reject(error.message || error);
+  // }
 }

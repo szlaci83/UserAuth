@@ -9,6 +9,6 @@ export class User {
     public password: string,
     public userName: string,
     public confirmed: string,
-   // public roles: string[],
-  ){}
+  //  public roles: string,
+  ) {}
 }
